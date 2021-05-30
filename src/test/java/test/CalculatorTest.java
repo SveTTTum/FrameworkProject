@@ -22,12 +22,6 @@ public class CalculatorTest extends AbstractTest {
 
         DataCalculator parameters = getCalculatorParameters();
         String textForSearchCalculator = "Google Cloud Platform Pricing Calculator";
-//        String vmClassResult = "VM class: regular";
-//        String instanceTypeResult= "Instance type: n1-standard-8";
-//        String regionResult = "Region: Frankfurt";
-//        String localSSDResult = "Total available local SSD space 2x375 GiB";
-//        String commitmentTermResult = "Commitment term: 1 Year";
-//        String totalCostResult = "Estimated Component Cost: USD 1,082.77 per 1 month";
 
         CalculatorPage pageHome = new CloudGoogleHomePage(driver)
                 .openPage()
