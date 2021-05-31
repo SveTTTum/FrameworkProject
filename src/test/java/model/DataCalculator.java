@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class DataCalculator {
     private String numberInstancesInput;
     private String whatInstancesForInput;
@@ -108,17 +110,38 @@ public class DataCalculator {
     }
 
     @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
     public String toString() {
-        return super.toString();
+        return "DataCalculator{" +
+                "numberInstancesInput='" + numberInstancesInput + '\'' +
+                ", whatInstancesForInput='" + whatInstancesForInput + '\'' +
+                ", operatingSystemInput='" + operatingSystemInput + '\'' +
+                ", machineClassInput='" + machineClassInput + '\'' +
+                ", seriesInput='" + seriesInput + '\'' +
+                ", machineTypeInput='" + machineTypeInput + '\'' +
+                ", numberGPUsInput='" + numberGPUsInput + '\'' +
+                ", typeGPUsInput='" + typeGPUsInput + '\'' +
+                ", localSSDInput='" + localSSDInput + '\'' +
+                ", datacenterLocationInput='" + datacenterLocationInput + '\'' +
+                ", commitedUsageInput='" + commitedUsageInput + '\'' +
+                ", machineClassExpected='" + machineClassExpected + '\'' +
+                ", machineTypeExpected='" + machineTypeExpected + '\'' +
+                ", localSsdExpected='" + localSsdExpected + '\'' +
+                ", datacenterLocationExpected='" + datacenterLocationExpected + '\'' +
+                ", commitedUsageExpected='" + commitedUsageExpected + '\'' +
+                ", totalCostExpected='" + totalCostExpected + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DataCalculator that = (DataCalculator) o;
+        return Objects.equals(numberInstancesInput, that.numberInstancesInput) && Objects.equals(whatInstancesForInput, that.whatInstancesForInput) && Objects.equals(operatingSystemInput, that.operatingSystemInput) && Objects.equals(machineClassInput, that.machineClassInput) && Objects.equals(seriesInput, that.seriesInput) && Objects.equals(machineTypeInput, that.machineTypeInput) && Objects.equals(numberGPUsInput, that.numberGPUsInput) && Objects.equals(typeGPUsInput, that.typeGPUsInput) && Objects.equals(localSSDInput, that.localSSDInput) && Objects.equals(datacenterLocationInput, that.datacenterLocationInput) && Objects.equals(commitedUsageInput, that.commitedUsageInput) && Objects.equals(machineClassExpected, that.machineClassExpected) && Objects.equals(machineTypeExpected, that.machineTypeExpected) && Objects.equals(localSsdExpected, that.localSsdExpected) && Objects.equals(datacenterLocationExpected, that.datacenterLocationExpected) && Objects.equals(commitedUsageExpected, that.commitedUsageExpected) && Objects.equals(totalCostExpected, that.totalCostExpected);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numberInstancesInput, whatInstancesForInput, operatingSystemInput, machineClassInput, seriesInput, machineTypeInput, numberGPUsInput, typeGPUsInput, localSSDInput, datacenterLocationInput, commitedUsageInput, machineClassExpected, machineTypeExpected, localSsdExpected, datacenterLocationExpected, commitedUsageExpected, totalCostExpected);
     }
 }
