@@ -33,14 +33,4 @@ public class CloudGoogleHomePage extends AbstractPage {
         logger.info("Search result with text: " + text);
         return new CloudGoogleResultPage(driver);
     }
-
-    //или можно сразу выбрать нужную страницу Calculator
-//    public CalculatorPage getSearchResults(String text) {
-//        By linkForSearchCalculator = By.xpath("//div[@id='suggestion-product-0']/a");
-//        buttonSearch.click();
-//        stringForSearch.sendKeys(text);
-//        wait.until(ExpectedConditions.presenceOfElementLocated(linkForSearchCalculator)).click();
-//        return new CalculatorPage(driver);
-//    }
-
 }

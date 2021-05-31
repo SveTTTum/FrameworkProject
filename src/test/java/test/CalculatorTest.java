@@ -13,14 +13,12 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static service.DataCalculatorCreator.getCalculatorParameters;
-
 public class CalculatorTest extends AbstractTest {
 
     @Test()
     public void setDataOnPage() throws IOException, UnsupportedFlavorException {
 
-        DataCalculator parameters = getCalculatorParameters();
+        DataCalculator parameters = DataCalculatorCreator.getCalculatorParameters();
         String textForSearchCalculator = "Google Cloud Platform Pricing Calculator";
 
         CalculatorPage pageHome = new CloudGoogleHomePage(driver)
